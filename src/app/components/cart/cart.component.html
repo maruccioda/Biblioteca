@@ -1,0 +1,13 @@
+<div>
+    <h2>Carrello</h2>
+    <p>Prodotti nel carrello: </p>
+    <div *ngFor="let libro of libri">
+        <ul>
+            <li >
+                {{ libro.Titolo }} ( {{ libro.id_biblioteca }} ) - di {{ libro.Autore }}
+            </li>
+        </ul>
+        
+    </div>
+    <p>fine</p>
+</div>

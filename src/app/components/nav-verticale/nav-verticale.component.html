@@ -1,0 +1,21 @@
+<!-- nav verticale  -->
+<nav class="navbar navbar-expand-lg nav-vertical ">
+    <div class="container-fluid flex-column text-center">
+        <div class="collapse navbar-collapse" id="vert-nav">
+            <ul class="navbar-nav flex-column align-items-center margine_sopra_sotto" id="menuVerticale">
+                <!-- <li>
+                    <form class="d-flex semaforo_vert" role="search" id="search_form_verticale">
+                        <input class="form-control me-2 ricerca_mio" type="search" placeholder="Search product"
+                            id="campo_nome_da_passare_per_ricerca_verticale" aria-label="Search">
+                        <button class="btn outline-mio" type="submit">Search</button>
+                    </form>
+                </li> -->
+                <li *ngFor="let genere of generi" class="nav-item">
+                    <a class="nav-link" (click)="passaLibri(genere.categoria)">
+                        {{ genere.titolo }}
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>

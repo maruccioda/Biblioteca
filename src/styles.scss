@@ -1,0 +1,340 @@
+/* You can add global styles to this file, and also import other style files */
+// filepath: /c:/Users/Utente/Desktop/.vscode/angular/Biblioteca/src/styles.scss
+@import 'bootstrap/dist/css/bootstrap.min.css';
+@import 'bootstrap-icons/font/bootstrap-icons.css';
+
+
+:root {
+    --rosso: red;
+    --verde: green;
+    --blu: blue;
+    --indaco: rgb(72, 72, 158);
+    --perla: rgb(254, 222, 222);
+
+    --main-nav-h: 9rem;
+    --vert-nav-width: 15rem;
+    --vert-nav-height: 9rem;
+
+    --rosso-ngw: #E63946;
+    --blu-ngw: #1D3557;
+    --perla-ngw: #F7F7F7;
+    --acqua-ngw: #0dcaf0;
+    --grigio-ngw: rgba(79, 79, 79, 0.93);
+    /* --larghezza-navbar-verticale: 15rem; */
+}
+
+
+
+#mainNav {
+    height: var(--main-nav-h);
+}
+
+/* stile su mobile */
+.nav-vertical {
+    // height: var(--vert-nav-height);
+    width: 100%;
+    position: fixed;
+    padding: 0;
+    margin: 0;
+    background-color: var(--blu-ngw);
+    display: inline-block !important;
+}
+
+.nav-vertical a.nav-link {
+    color: var(--perla-ngw);
+}
+
+main {
+    padding: 4rem;
+}
+
+@media(min-width: 992px) {
+    #nomeElogo{
+        width: 80%;
+    }
+    .page{
+        font-size: 20px;
+    }
+    .scritta{
+        font-size: 40px !important;
+    }
+
+    section{
+        margin-top: calc(var(--vert-nav-height) + 1rem);
+    }
+
+    .navbar.navbar-expand-lg.nav-vertical {
+        width: var(--vert-nav-width);
+        height: calc(100vh - var(--main-nav-h)); 
+        // senza altezza perchè dipende dalla navbar verticale che si apre
+        position: absolute;
+
+    }
+
+    main {
+        margin-left: var(--vert-nav-width);
+    }
+
+    .navbar.navbar-expand-lg.nav-vertical li:hover {
+        background-color: var(--indaco);
+        border-radius: 0.5rem;
+        transition: all 0.4s;
+    }
+
+    section {
+        margin-top: 10rem;
+    }
+
+    .semaforo_vert {
+        display: none !important;
+        border: 3px solid red;
+    }
+}
+
+.riconoscimento {
+    font-size: 20px;
+}
+
+.spaziatore {
+    margin-right: 5%;
+}
+
+section {
+    margin-top: 4rem;
+    height: 100vh;
+}
+
+header {
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+}
+
+// .nav-link.mx-2.d-flex.flex-column {
+//     display: none !important;
+// }
+
+.logo {
+    width: 10%;
+    height: 10%;
+    margin: 0 12px;
+}
+
+.logo_testo {
+    width: 50%;
+}
+
+.distanziatore {
+    margin-bottom: 20px;
+}
+
+.modify_database_prodotto {
+    text-align: center;
+}
+
+.modify_database_prodotto input {
+    width: 100px;
+}
+
+.modify_database_prodotto>.input_per_modificare_numeri {
+    width: 60px;
+}
+
+.lista_elementi_menu_pagine {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.immagine_prodotto {
+    padding: 10%;
+}
+
+.outline-mio {
+    color: white;
+    border: 2px solid white;
+}
+
+.outline-mio:hover {
+    background-color: var(--blu-ngw);
+    color: white;
+    border: 2px solid white;
+    transition: all 0.4s;
+}
+
+.ricerca_mio {
+    border: 2px solid var(--blu-ngw);
+}
+.scritta{
+    font-size: 30px;
+}
+.margine_sopra_sotto {
+    margin: 25px 0;
+}
+
+
+
+.immagine_piccola {
+    display: none;
+    max-width: 300px;
+    max-height: 300px;
+}
+
+.input_file {
+    width: auto !important;
+    background-color: var(--blu-ngw);
+    color: white;
+    border-radius: 31px;
+    font-size: 20px;
+    width: 10%;
+}
+
+.outline_menu_oriz:hover {
+    background-color: var(--perla-ngw);
+    border: 3px solid var(--blu-ngw);
+    transition: all 0.4s;
+    border-radius: 40px;
+}
+
+.btn_add_product {
+    font-size: 20px;
+    background-color: var(--blu-ngw);
+    color: var(--perla-ngw);
+    border-radius: 20px;
+}
+
+.modal-header {
+    background-color: var(--acqua-ngw);
+    border-bottom: 2px solid black;
+}
+
+.Procedi_pagamento {
+    background-color: var(--acqua-ngw);
+}
+
+.Procedi_pagamento:hover {
+    background-color: var(--blu-ngw);
+    color: var(--perla-ngw);
+}
+
+.Continua_acquisti {
+    background-color: gray;
+}
+
+.Continua_acquisti:hover {
+    background-color: var(--blu-ngw);
+    color: var(--perla-ngw);
+}
+
+.btn-close:hover {
+    border: 4px solid var(--blu-ngw);
+}
+
+.button_mio {
+    margin-top: 10%;
+    background-color: var(--acqua-ngw);
+}
+
+.button_mio:hover {
+    margin-top: 10%;
+    background-color: var(--blu-ngw);
+    color: var(--perla-ngw);
+}
+
+#prodotti {
+    flex-wrap: wrap !important;
+}
+
+.modifica {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center
+}
+
+@media (max-width: 992px) {
+    .semaforo_oriz {
+            display: none !important
+    }
+    
+    #prodotti {
+        flex-wrap: wrap !important;
+    }
+
+    .modifica {
+        width: 100%;
+    }
+}
+
+td {
+    width: 100px;
+    text-align: center;
+}
+
+#lista_carrello {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.ultima_tr {
+    width: 100%;
+    display: flex;
+}
+
+.elimina {
+
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    font-size: 30px;
+    color: var(--blu-ngw);
+    padding: 0px;
+    margin: 0px;
+
+    height: 30px !important;
+    margin-top: -5px;
+}
+
+.elimina:hover:before {
+
+    background-color: var(--acqua-ngw);
+}
+
+
+.bi::before,
+[class*=" bi-"]::before,
+[class^="bi-"]::before {
+
+    vertical-align: 0em;
+}
+
+.modifica_pencil {
+
+
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    font-size: 30px;
+    color: var(--blu-ngw);
+    padding: 0px;
+    margin: 0px;
+
+    height: 30px !important;
+    margin-top: -5px;
+}
+
+.modifica_pencil:hover:before {
+
+    background-color: var(--acqua-ngw);
+}
+
+.contenitore-libro{
+    border: 1px solid black;
+    
+}
+.item-libro{
+    margin-top: 3%;
+    
+    margin-left: 2%;
+}

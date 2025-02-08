@@ -1,0 +1,33 @@
+
+
+<!-- 
+<div class="d-flex justify-content-between flex-wrap">
+
+    <div *ngFor="let p of prestiti " style="width: 18rem; margin-bottom: 2rem;">
+
+            <div class="card d-flex align-items-center" style="width: 17rem;">
+            <img src="{{p.picture}}"  class="card-img-top " alt="..." style="height: 15rem; width: 15rem;">
+            <div class="card-body">
+            <h5 class="card-title text-center">{{p.Titolo}}</h5>
+            <p class="card-text text-center">{{p.Nome}}</p>
+            <p class="card-text text-center">{{p.price}} €</p>
+
+            <a href="#" class="btn btn-primary" (click)="pushProduct(p)">Aggiungi al carrello</a>
+        </div>
+    </div>
+     -->
+<div>
+    <div *ngFor="let libro of libri" class="contenitore-libro d-flex align-items-center justify-content-between" >
+        <span class=" d-flex flex-column" style="width: 50%;">
+            <div>
+                <h3 class="item-libro " style="height: 50%;">{{ libro.Titolo}}</h3>
+            </div>
+            <div>
+                <span class="item-libro" style="height: 50%;">{{libro.Autore}}</span>
+            </div>
+        </span>
+        <span style="margin-right: 2rem;">
+            <button class="btn btn-primary" (click)="pushProduct(libro)"> Aggiungi alla lista dei prestiti</button>
+        </span>
+    </div>
+</div>

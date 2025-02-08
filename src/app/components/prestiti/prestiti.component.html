@@ -1,0 +1,16 @@
+<!-- <app-nav-verticale></app-nav-verticale> -->
+<main>
+    <h2>Prestiti: </h2>
+    <ul>
+        <div *ngFor="let utente of prestitidapassare">
+            <h3>{{ utente.nome }} {{ utente.cognome }}</h3>
+            <ul>
+                <li *ngFor="let libro of utente.libri">
+                    {{ libro.titolo }}- ({{libro.id}}) - preso il {{ libro.dataPrestito }}
+                    <span *ngIf="libro.isOld" style="color: red;">(Scaduto)</span>
+                </li>
+            </ul>
+        </div>
+
+    </ul>
+</main>

@@ -1,0 +1,25 @@
+<!-- filepath: /c:/Users/Utente/Desktop/.vscode/angular/Biblioteca/src/app/components/login/login.component.html -->
+
+<h1 class="text-center mt-4">
+    Login
+</h1>
+<div class="d-flex justify-content-center" style="margin-top: 4rem;">
+    <form (submit)="onSubmit()" style="width: 80%;">
+        <div>
+            <div style="font-size: 20px;">
+                <div class="mb-3">
+                    <label for="InputEmail" class="form-label">Email</label>
+                    <input type="email" class="form-control" id="InputEmail" [(ngModel)]="email" name="email"
+                        aria-describedby="emailHelp" placeholder="es. 'rossi.mario@itismaglie.it'" required>
+                </div>
+                <div class="mb-3">
+                    <label for="InputPassword" class="form-label">Password</label>
+                    <input type="password" class="form-control" id="InputPassword" [(ngModel)]="password "
+                        name="password" required>
+                </div>
+                <button type="submit" class="btn btn-primary" (click)="onSubmit()">Login</button>
+            </div>
+        </div>
+        <p *ngIf="error" class="error">{{ error }}</p>
+    </form>
+</div>
